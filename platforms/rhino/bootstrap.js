@@ -138,7 +138,8 @@
         print: print,
         fs: {
             read: read,
-            isFile: isFile
+            isFile: isFile,
+            SEPARATOR:String(Packages.java.lang.System.getProperty("file.seperator"));
         },
         prefix: prefix,
         packagePrefixes: packagePrefixes,

@@ -37,9 +37,10 @@ exports.FileIO = function (path, mode, permissions) {
 
 /* paths */
 
-exports.SEPARATOR = '/';
+exports.SEPARATOR = String(Packages.java.lang.System.getProperty("file.separator"));
 exports.ALT_SEPARATOR = undefined;
 exports.ROOT = '/';
+if(exports.SEPARATOR == "\\") exports.ROOT = 'c:\\'; 
 
 exports.cwd = function () {
     return String(Packages.java.lang.System.getProperty("user.dir"));
